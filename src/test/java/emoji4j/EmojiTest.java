@@ -151,14 +151,14 @@ public class EmojiTest {
 
 	@Test
 	public void testShortCodifyFromEmoticons() {
-		String text = ":):-),:-):-]:-xP=*:*<3:P:p,=-)";
+		String text = ":):-),:-):-]:-=*:*,=-)";
 		String actual = EmojiUtils.shortCodify(text);
 		assertThat(actual)
 				.isEqualTo(
-						":smiley::smiley::sweat_smile::smiley::no_mouth::stuck_out_tongue_closed_eyes::kissing::kissing::heart::stuck_out_tongue::stuck_out_tongue::sweat_smile:");
+						":smiley::smiley::sweat_smile::smiley::no_mouth::kissing::kissing::sweat_smile:");
 
 		assertThat(EmojiUtils.emojify(actual)).isEqualTo(
-				"😃😃😅😃😶😝😗😗❤️😛😛😅");
+				"😃😃😅😃😶😗😗😅");
 	}
 
 	@Test
